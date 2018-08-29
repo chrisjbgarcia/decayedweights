@@ -1,0 +1,23 @@
+#Below decayed weights
+
+lambda<- 0.9737 # smoothing parameter 0.9737 for weekly data 6m Half-Life - 2years of observations (Aladdin PRT settings)
+#below defines weight vector
+wt <- matrix(NA,nc=1,nr=(dim(x)[1]))
+tmp<-1
+for (i in 1:(dim(x)[1])){ 
+  #below - an example of if statement use
+  if (i==1)
+  {
+    wt[i,]<-tmp
+  }
+  else
+  {
+    tmp<- tmp*lambda
+    wt[i,]<-tmp
+  }
+}
+
+#weight vector is in reverse order this will need to be reversed
+wt<-rev(wt)
+wt<-as.matrix(wt)
+plot(wt)
