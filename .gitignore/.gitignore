@@ -1,6 +1,6 @@
 #Below decayed weights
 
-lambda<- 0.9737 # smoothing parameter 0.9737 for weekly data 6m Half-Life - 2years of observations (Aladdin PRT settings)
+lambda<- 0.9737 # smoothing parameter 0.9737 for weekly data 6m Half-Life - 2years of observations
 #below defines weight vector
 wt <- matrix(NA,nc=1,nr=(dim(x)[1]))
 tmp<-1
