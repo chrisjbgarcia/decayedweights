@@ -21,3 +21,4 @@ for (i in 1:(dim(x)[1])){
 wt<-rev(wt)
 wt<-as.matrix(wt)
 plot(wt)
+
